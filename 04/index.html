@@ -4,10 +4,40 @@
   <meta charset="utf-8">
 	<title>Ejercicio 04</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script
+	  src="http://code.jquery.com/jquery-3.3.1.js"
+	  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	  crossorigin="anonymous"></script>
 </head>
 <body>
   <button class="add_name">+</button>
   <ul class="names"></ul>
 
+
+<script>
+	$('.add_name').on('click', function(){
+		var data = prompt('Por favor agrega un nombre a la lista', 'Harry Potter');
+		
+		if(data!= null && data!="")
+		{
+			alert('El nombre guardado es: ' + data)
+		}
+		else
+		{
+			alert('El nombre no fue guardado')
+		}
+		$(".names").append('<ul><li><a href="#" class="remove_name">' + data + '</a></li> </ul>')
+		$('a[href="#"').on('click', function(event){
+			event.preventDefault();
+		})	
+	})
+
+	$('.remove_name').click().remove();
+	
+	
+
+	
+
+</script>
 </body>
 </html>
