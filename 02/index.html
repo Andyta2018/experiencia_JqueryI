@@ -4,6 +4,13 @@
 	<meta charset="utf-8">
 	<title>Ejercicio 02</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script
+	  src="http://code.jquery.com/jquery-3.3.1.js"
+	  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	  crossorigin="anonymous">
+	</script>
+
+
 </head>
 <body>
 	<header class="header__main">
@@ -113,4 +120,14 @@
 		<p class="footer__legal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sint praesentium laboriosam atque placeat architecto, maxime temporibus sequi veniam quae culpa accusantium dignissimos natus perferendis mollitia quam optio incidunt. Esse!</p>
 	</footer>
 </body>
+
+<script>
+	$("article:nth-child(5) ul").children("li").last().children("a").text("Pinterest").attr("href", "http://pinterest.com");
+
+	$("a[href='#']").on("click", function(event){
+			event.preventDefault();
+	})
+
+	$(".header__main h2").css("font-size", "2rem")
+</script>
 </html>
