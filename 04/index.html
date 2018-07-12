@@ -26,17 +26,16 @@
 		{
 			alert('El nombre no fue guardado')
 		}
-		$(".names").append('<ul><li><a href="#" class="remove_name">' + data + '</a></li> </ul>')
+		$(".names").append('<li><span>' + data + '</span><a href="#" class="remove_name"> x</a></li>')
 		$('a[href="#"').on('click', function(event){
 			event.preventDefault();
 		})	
+	});
+
+	$('.names').on('click', '.remove_name', (function(event){
+		$(this).parent().remove();
 	})
-
-	$('.remove_name').click().remove();
-	
-	
-
-	
+	);
 
 </script>
 </body>
